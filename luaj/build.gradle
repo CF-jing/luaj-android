@@ -29,27 +29,4 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'io.apisense:rhino-android:1.0'
-    // https://mvnrepository.com/artifact/org.apache.bcel/bcel
-    api group: 'org.apache.bcel', name: 'bcel', version: '5.2'
-}
-
-// 上传jcenter的工具配置
-apply plugin: 'com.novoda.bintray-release'
-
-// 发布请执行：
-// gradlew clean build bintrayUpload -PbintrayUser=kigkrazy -PbintrayKey=${APIKey} -PdryRun=false
-publish {
-    repoName = 'reizxutils'
-    artifactId = 'luaj-android'
-    groupId = 'com.reizx'
-    userOrg = 'kigkrazy'//bintray用户名
-    publishVersion = android.defaultConfig.versionName
-    website = 'https://github.com/kigkrazy/luaj-android'
-    desc = 'luaj for android'//描述，不重要
 }

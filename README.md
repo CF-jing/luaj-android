@@ -132,3 +132,4 @@ LuajLog:d('cosh(0.5) : '..hyperbolic.cosh(0.5))
 
 ### 修改日志
 * 修复`classloader`引用错误。
+* 删除两个多余库，删除相关代码，让整个库精简1M多。
